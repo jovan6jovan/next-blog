@@ -8,7 +8,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
       <Head>
         <title key="title">Next Blog</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.ico" />
       </Head>
       <Component {...pageProps} />
     </div>
