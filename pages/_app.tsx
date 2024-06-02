@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { FC } from "react";
+import "styles/globals.css";
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
