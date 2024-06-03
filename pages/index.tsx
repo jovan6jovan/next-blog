@@ -1,4 +1,5 @@
 import { GetServerSideProps } from "next";
+import Link from "next/link";
 import { FC } from "react";
 import BlogPost from "../containers/BlogPost";
 import { IBlogPost } from "../containers/BlogPost/BlogPost.types";
@@ -14,11 +15,11 @@ const Home: FC<HomepageProps> = ({ posts }) => {
     <Container>
       <h1 className="font-bold text-5xl mt-16 mb-10">Next blog</h1>
       {posts?.map((post: IBlogPost) => (
-        <BlogPost
-          key={post.id}
-          title={post.title}
-          description={post.description}
-        />
+        <Link key={post.id} href={`/posts/${post.id}`}>
+          <a>
+            <BlogPost title={post.title} description={post.description} />
+          </a>
+        </Link>
       ))}
     </Container>
   );
